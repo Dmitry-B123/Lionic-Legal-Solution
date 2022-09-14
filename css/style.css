@@ -49,6 +49,11 @@ img {
    display: inline-block;
 }
 
+.btn:hover {
+   background-color: rgb(25, 0, 255);
+   transition: background-color 0.3s ease;
+}
+
 .btn.btn-big {
    padding: 22px 50px;
 }
@@ -81,6 +86,11 @@ section {
 
 .nav-link {
    color: #1c1c1c;
+   transition: color .2s ease;
+}
+
+.nav-link:hover {
+   color: #3172b9;
 }
 
 .nav-list__item:not(:last-child) {
@@ -192,10 +202,31 @@ section {
    padding: 61px 32px;
    border-radius: 0.313rem;
    border: 0.063rem solid #e4e4e4;
+   transition-property: background-color, color;
+   transition-duration: 0.3s;
+   transition-timing-function: ease;
 }
 
 .section-do__item:not(:last-child) {
    margin-right: 30px;
+}
+
+.section-do__item:hover {
+   cursor: pointer;
+   background-color: #3172b9;
+}
+
+.section-do__icon path {
+   transition: fill 0.3s ease;
+}
+
+.section-do__item:hover .section-do__item-description,
+.section-do__item:hover .section-do__item-heading {
+   color: #ffffff;
+}
+
+.section-do__item:hover .section-do__icon path {
+   fill: #ffffff;
 }
 
 .section-do__item-heading {
@@ -213,6 +244,11 @@ section {
    font-size: 0.875rem;
    line-height: 1.5;
    margin-top: 20px;
+}
+
+.section-do__item-heading,
+.section-do__item-description {
+   transition: color 0.3s ease;
 }
 
 /* section-clients */
@@ -271,7 +307,7 @@ section {
 
 /* section-contacts */
 
-.section_contacts__inner {
+.section-contacts__inner {
    padding-top: 70px;
    padding-bottom: 167px;
 }
@@ -334,7 +370,7 @@ section {
    margin-bottom: 44px;
 }
 
-/*  */
+/* section-form */
 
 .section-form__inner {
    padding: 120px 0;
