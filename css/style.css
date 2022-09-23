@@ -71,16 +71,12 @@ section {
    justify-content: space-between;
 }
 
-.header__logo {
-   margin-right: auto;
-}
-
 .nav-list {
    display: flex;
 }
 
 .nav-list__item {
-   font-size: 0.9375em;
+   font-size: 0.9375rem;
    font-weight: 600;
 }
 
@@ -102,8 +98,7 @@ section {
 }
 
 .header__btn {
-   margin-left: 80px;
-   font-size: 0.9375em;
+   font-size: 0.9375rem;
 }
 
 /* section-hero */
@@ -172,7 +167,7 @@ section {
    color: #1c1c1c;
    font-size: 2.25rem;
    font-weight: 300;
-   line-height: 0.58;
+   line-height: 1.2;
    text-align: center;
    margin: 0;
    margin-bottom: 36px;
@@ -189,12 +184,10 @@ section {
 
 .section-do__list {
    margin-top: 55px;
-   display: flex;
-   justify-content: space-between;
 }
 
 .section-do__item {
-   flex: 1 1 25%;
+   margin-bottom: 30px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -205,10 +198,6 @@ section {
    transition-property: background-color, color;
    transition-duration: 0.3s;
    transition-timing-function: ease;
-}
-
-.section-do__item:not(:last-child) {
-   margin-right: 30px;
 }
 
 .section-do__item:hover {
@@ -263,13 +252,7 @@ section {
    text-align: left;
 }
 
-.section-clients__list {
-   display: flex;
-   justify-content: space-between;
-}
-
 .section-clients__list-item {
-   flex: 1 1 33.33%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -277,6 +260,7 @@ section {
    border-radius: 0.313rem;
    border: 0.063rem solid #e4e4e4;
    max-width: 370px;
+   margin-bottom: 30px;
 }
 
 .section-clients__user {
@@ -320,13 +304,9 @@ section {
    margin-bottom: 120px;
 }
 
-.section-contacts__list {
-   display: flex;
-   justify-content: space-between;
-}
 
 .section-contacts__item {
-   flex: 1 1 33.33%;
+   margin-bottom: 30px;
 }
 
 .section-contacts__heading {
@@ -416,8 +396,6 @@ section {
 
 .footer__inner {
    min-height: 140px;
-   display: flex;
-   justify-content: space-between;
 }
 
 .footer__left {
@@ -491,8 +469,33 @@ section {
    height: 18px;
 }
 
-/* @media screen and (max-width: 300px) {
-   .header__logo {
-      font-size: 3rem;
+@media screen and (max-width: 1199px) {
+   .header__nav {
+      order: 2;
    }
-} */
+
+   .header__btn {
+      order: 1;
+   }
+}
+
+@media screen and (max-width: 599px) {
+   .header__nav {
+      display: none;
+   }
+
+   .footer__right {
+      flex-direction: column;
+   }
+
+   .footer-nav__list {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 20px;
+   }
+
+   .footer-nav {
+      margin-bottom: 20px;
+   }
+}
